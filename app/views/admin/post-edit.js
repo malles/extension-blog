@@ -3,11 +3,11 @@ window.Post = {
     el: '#post',
 
     data: function () {
-        return {
+        return _.merge({
             data: window.$data,
             post: window.$data.post,
             sections: []
-        }
+        }, window.$data);
     },
 
     created: function () {
